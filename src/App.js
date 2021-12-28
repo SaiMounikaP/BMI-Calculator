@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import TextInput from "./components/TextInput";
 import Button from "./components/Button";
+import "./style.css";
 
 const App = () => {
   const [weight, setWeight] = useState();
@@ -37,6 +38,7 @@ const App = () => {
     }
   };
 
+  
   return (
     <div className="App">
     <div className="container">
@@ -49,25 +51,31 @@ const App = () => {
           boxSizing: "border-box",
         }}
       >
-        <h2>Welcome to our BMI Calculator!</h2>
+        <h2><strong>Welcome to our <em>BMI Calculator</em></strong></h2>
       </div>
       <div className="row">
         <TextInput
-          label="Height"
+          label="Height  "
           placeholder="Enter height in cm"
           handleChange={handleHeightChange}
           value={height}
         />
       </div>
+      <div class="row">
+        <h1> </h1>
+      </div>
       <div className="row">
         <TextInput
-          label="Weight"
+          label="Weight  "
           placeholder="Enter weight in kg"
           handleChange={handleWeightChange}
           value={weight}
           
         />
         
+      </div>
+      <div class="row">
+        <h1> </h1>
       </div>
       <div className="row">
         <Button label="CALCULATE" onClick={computeBmi} />
@@ -79,7 +87,7 @@ const App = () => {
         
       </div>
       <div className="row">
-        <h3>{bmiClass}</h3>
+        <h3> {bmiClass}</h3>
       </div>
     </div>
     </div>
@@ -87,3 +95,4 @@ const App = () => {
 };
 
 export default App;
+
